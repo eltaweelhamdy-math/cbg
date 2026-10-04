@@ -5,69 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>مجموعة بناء الطاقات | CBG</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Readex+Pro:wght@500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#f6f7fb;--card:#fff;--ink:#1d1b32;--mute:#5b5a70;--navy:#1d1b32;--teal:#1bb8b0;--plum:#8a3b86;--green:#0aa05a;--line:#e1e1ec;--hero:#fff;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15142a;--card:#201e3a;--ink:#f1f1f8;--mute:#aaa9c4;--line:#34324f}}
-:root[data-theme="dark"]{--bg:#15142a;--card:#201e3a;--ink:#f1f1f8;--mute:#aaa9c4;--line:#34324f}
-html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.8 "IBM Plex Sans Arabic",system-ui,sans-serif}
-h1,h2,h3,.disp{font-family:"Readex Pro","IBM Plex Sans Arabic",sans-serif;line-height:1.35;margin:0}
-a{color:inherit}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--navy);color:#fff;border-bottom:3px solid var(--teal)}
-.bar{max-width:1180px;margin:auto;display:flex;align-items:center;gap:20px;padding:10px 20px}
-.logo{font:700 26px/1 "Readex Pro",sans-serif;letter-spacing:1px;text-decoration:none;direction:ltr;display:flex;align-items:flex-end;gap:2px}
-.logo i{color:var(--teal);font-style:normal;font-size:18px}
-nav{display:flex;gap:4px;margin-inline-start:auto;flex-wrap:wrap}
-nav a{padding:8px 12px;border-radius:8px;text-decoration:none;font-size:15px;color:#d8d8ea}
-nav a:hover,nav a.on{background:rgba(27,184,176,.18);color:#fff}
-nav a.on{box-shadow:inset 0 -2px var(--teal)}
-button{font:inherit;cursor:pointer}
-.lang{border:1px solid var(--teal);background:none;color:#fff;border-radius:8px;padding:6px 14px}
-.lang:hover{background:var(--teal)}
-.menu{display:none;background:none;border:0;color:#fff;font-size:26px;margin-inline-start:auto}
-:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
-.hero{position:relative;overflow:hidden;color:#fff;text-align:center;padding:96px 20px 88px;background:radial-gradient(900px 400px at 75% 90%,rgba(138,59,134,.55),transparent),radial-gradient(700px 400px at 10% 0,rgba(27,184,176,.25),transparent),#1d1b32}
-.hero.sm{padding:56px 20px 48px}
-.hero .x{position:absolute;inset:0;margin:auto;width:520px;height:520px;opacity:.12;pointer-events:none}
-.x b{position:absolute;left:50%;top:50%;width:70px;height:340px;margin:-170px 0 0 -35px;border:3px solid var(--teal);border-radius:40px}
-.x b:nth-child(1){transform:rotate(45deg)}.x b:nth-child(2){transform:rotate(-45deg)}
-.hero>*{position:relative}
-.hero h1{font-size:clamp(30px,5.5vw,56px);max-width:860px;margin:0 auto 18px}
-.hero p{max-width:720px;margin:0 auto 28px;color:#d8d8ea;font-size:18px}
-.since{font:600 15px "Readex Pro";color:var(--teal);margin-bottom:16px;direction:ltr}
-.btn{display:inline-block;padding:12px 26px;border-radius:10px;background:var(--teal);color:#10162a;font-weight:600;text-decoration:none;border:0;transition:transform .15s,background .15s}
-.btn:hover{transform:translateY(-2px);background:#35d2ca}
-.btn.o{background:none;color:#fff;border:1.5px solid #fff;margin-inline-start:10px}
-.btn.o:hover{background:#fff;color:var(--navy)}
-main{max-width:1180px;margin:auto;padding:0 20px}
-section{padding:56px 0}
-h2{font-size:clamp(24px,3.5vw,34px);margin-bottom:8px}
-h2+p.lead{color:var(--mute);max-width:720px;margin:0 0 28px}
-.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;border-inline-start:5px solid var(--teal)}
-.card.p{border-inline-start-color:var(--plum)}
-.card h3{font-size:18px;margin-bottom:8px}.card p{margin:0;color:var(--mute)}
-.stats{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
-.stat{background:var(--navy);color:#fff;border-radius:14px;padding:22px;text-align:center}
-.stat b{display:block;font:700 40px "Readex Pro";color:#2fe08a}
-.stat span{color:#c9c9de;font-size:14px}
-.band{background:var(--navy);color:#fff;margin:0 -20px;padding:56px 20px}
-.band .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)}.band .card p{color:#c9c9de}
-ul.chk{list-style:none;padding:0;margin:0}
-ul.chk li{padding:9px 0;border-bottom:1px solid var(--line);display:flex;gap:10px}
-ul.chk li:before{content:"";flex:none;width:12px;height:6px;margin-top:11px;border-radius:6px;background:var(--teal);transform:rotate(-45deg)}
-.person{display:flex;gap:14px;align-items:center}
-.av{flex:none;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--plum),var(--teal));color:#fff;display:grid;place-items:center;font:600 20px "Readex Pro"}
-.person small{display:block;color:var(--mute);line-height:1.5}
-.tbd{border:2px dashed var(--line);border-radius:14px;padding:28px;text-align:center;color:var(--mute)}
-.ceo{font-size:17px}.ceo p{max-width:75ch}
-footer{background:var(--navy);color:#c9c9de;margin-top:40px;border-top:3px solid var(--plum)}
-.fin{max-width:1180px;margin:auto;padding:36px 20px;display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between}
-footer a{color:#fff;display:block;text-decoration:none;padding:2px 0}footer a:hover{color:var(--teal)}
-@media(max-width:860px){.menu{display:block}.lang{margin-inline-start:0}nav{display:none;position:absolute;top:100%;inset-inline:0;background:var(--navy);flex-direction:column;padding:10px 20px 16px;margin:0}nav.open{display:flex}.btn.o{margin:10px 0 0}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
-</style>
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 <header><div class="bar">
@@ -78,58 +17,7 @@ footer a{color:#fff;display:block;text-decoration:none;padding:2px 0}footer a:ho
 </div></header>
 <div id="app"></div>
 <footer><div class="fin" id="foot"></div></footer>
-<script>
-let lang='ar';
-try{lang=localStorage.getItem('cbg-lang')||'ar'}catch(e){}
-const L=(a,e)=>lang==='ar'?a:e;
-const N=[['home','الرئيسية','Home'],['about','من نحن','About Us'],['services','أعمالنا وخدماتنا','Our Work'],['team','فريقنا','Our Team'],['clients','العملاء والشركاء','Clients & Partners'],['careers','الوظائف','Careers'],['contact','تواصل معنا','Contact Us']];
-const cards=(a,c)=>`<div class="grid">${a.map(x=>`<div class="card ${c||''}"><h3>${x[0]}</h3><p>${x[2]}</p></div>`).join('')}</div>`;
-const hero=(t,p,sm)=>`<div class="hero ${sm?'sm':''}"><div class="x"><b></b><b></b></div><div class="since">SINCE 2006</div><h1>${t}</h1>${p?`<p>${p}</p>`:''}</div>`;
-const sec=(t,l,b,cls)=>`<section ${cls?'class="'+cls+'"':''}><h2>${t}</h2>${l?`<p class="lead">${l}</p>`:''}${b}</section>`;
-const stats=[['20','عامًا من الخبرة','Years of Experience'],['30','موظفًا مكافئًا للدوام الكامل','Full-Time Equivalent Staff'],['180','عميلًا خدمناه','Clients Served'],['250','مشروعًا نفّذناه','Projects Implemented'],['72%','من عملائنا تعاقدوا معنا مجددًا','Clients Who Worked with Us Again'],['3,000','قياديّ وممارس شملهم التدريب','Leaders & Professionals Trained'],['9','جهات أسهمنا في تأسيسها','Organizations Supported in Their Establishment'],['17','دراسة قطاعية أجريناها','Sector Studies Conducted'],['4','شركاء قطاعيين فاعلين','Active Sector Partners']];
-const statsH=()=>`<div class="stats">${stats.map(s=>`<div class="stat"><b>${s[0]}</b><span>${L(s[1],s[2])}</span></div>`).join('')}</div>`;
-const lv=[['المنظومات القطاعية','Sector Ecosystems','تنسيق أدوار الجهات المعنية بالقطاع، وتطوير أولويات ومعايير مشتركة.','Coordinating the roles of sector stakeholders and developing shared priorities and standards.'],['المؤسسات','Institutions','تطوير الهياكل التنظيمية والقدرات والموارد لدعم الأداء المؤسسي والاستدامة.','Strengthening organizational structures, capabilities, and resources to support institutional performance and sustainability.'],['المبادرات والمستفيدون','Initiatives and Beneficiaries','تحسين تصميم البرامج والمبادرات وتنفيذها لتلبية احتياجات المستفيدين.','Improving how programs and initiatives are designed and delivered to address beneficiary needs.']].map(x=>[L(x[0],x[1]),'',L(x[2],x[3]),'']);
-const lvH=()=>`<div class="grid">${lv.map(x=>`<div class="card"><h3>${x[0]}</h3><p>${x[2]}</p></div>`).join('')}</div>`;
-const why=[['غاية اجتماعية تتجاوز حدود التكليف','A Social Purpose Beyond Each Assignment','لأننا مملوكون لوقف الباقيات، فإن كل تكليف يسهم كذلك في دعم مصارف الوقف الخيرية المعتمدة.','Because we are owned by Al-Baqiyat Endowment, every assignment also supports the Endowment’s approved charitable purposes.'],['تكامل الاستشارات والتنفيذ','Continuity from Advice to Implementation','فرقنا الاستشارية والبحثية والتشغيلية والرقمية تحت سقف واحد، من التصميم إلى التنفيذ والتشغيل.','Our consulting, research, operations, and digital teams work under one roof, from design through implementation and operations.'],['معرفة محلية موثوقة وخبرات عالمية','Trusted Local Insight, Global Expertise','نجمع بين المعرفة بالأنظمة السعودية وأهداف رؤية 2030 والخبرات الدولية، ونكيّفها مع الاحتياجات المحلية.','We combine knowledge of Saudi regulations and Vision 2030 with international expertise, adapted to local needs.'],['شراكة متجاوبة','Responsive Partnership','نستجيب بسرعة لمعطيات التنفيذ الجديدة ونتفق مع عملائنا على التعديلات اللازمة مع الحفاظ على الجودة.','We respond promptly as implementation reveals new needs, adapting plans while maintaining quality.'],['نقل القدرات','Capability Transfer','ندعم فرق عملائنا في تولّي مسؤولية العمل بما يتيح استمراره دون دعم خارجي دائم.','We support client teams in taking ownership so the work continues without ongoing external support.']];
-const svc=[['الخدمات الاستشارية','Advisory Services',['تطوير القطاعات وتمكينها|Sector Development and Enablement','تصميم الكيانات والمبادرات|Entity and Initiative Design','التطوير المؤسسي والبرامج الاستشارية المتخصصة|Institutional Development and Specialized Advisory Programs']],['البحوث والدراسات القطاعية','Research & Sector Studies',['الدراسات المجتمعية وقياس الأثر|Community Studies and Impact Measurement','التحليل القطاعي والبحوث التطبيقية|Sector Analysis and Applied Research','المقارنات المرجعية والتحليل المقارن|Benchmarking and Comparative Analysis','من البحث إلى التطبيق|Research into Practice']],['تنمية القدرات البشرية','Human Capability Development',['تقييم الكفاءات وتخطيط التطوير|Competency Assessment and Development Planning','الزمالات المهنية والبرامج التأهيلية|Professional Fellowships and Qualification Programs','دعم الموظفين في بداية العمل|Early Employment Support']],['تشغيل المبادرات','Initiative Operations',['تنفيذ المبادرات|Initiative Implementation','الإشراف على التنفيذ وإعداد التقارير|Implementation Oversight and Reporting']],['تطوير المنتجات والتحول الرقمي','Product Development & Digital Transformation',['تطوير الأدوات والحلول القطاعية|Sector Tools and Solution Development','تطوير المنصات الرقمية|Digital Platform Development']]];
-const vals=[['التخصص القطاعي','Sector Focus'],['التمكين المُتَمَحْوِر حول الإنسان','People-Centered Enablement'],['التفكير المستند إلى الأدلة','Evidence-Led Thinking'],['الابتكار الهادف','Purposeful Innovation'],['التميّز في التنفيذ','Delivery Excellence'],['الأثر والاستدامة','Impact & Sustainability'],['التعلّم المستمر','Continual Learning']];
-const team=[['التوجيه والإشراف','Direction and Oversight',[['إبراهيم الشهري','Ibrahim Al-Shehri','الرئيس التنفيذي','CEO','is@cbg.sa'],['أصيل المرتضى','Aseel Al-Mortada','منسق مكتب إدارة محافظ المشاريع','PPMO Coordinator','a.almortada@cbg.sa']]],['الاستشارات والتنفيذ','Consulting and Implementation',[['عبدالله سعد','Abdullah Saad','مدير البرامج وعلاقات العملاء | قطاع التعليم','Program & Engagement Lead | Education','abdullah.s@cbg.sa'],['عبدالكريم الغنيم','Abdulkarim Al-Ghunaim','مدير البرامج وعلاقات العملاء | القطاع غير الربحي','Program & Engagement Lead | Nonprofit','abdulkarim.g@cbg.sa'],['عمر باحشوان','Omar Bahashwan','مدير العمليات | القطاع غير الربحي','Operations Manager | Nonprofit','ob@cbg.sa'],['سارة الحارثي','Sarah Al-Harthy','مديرة العمليات | قطاع التعليم','Operations Manager | Education','s.alharthy@cbg.sa']]],['الدعم والإسناد المتخصص','Specialist Support',[['فادي أبو شهلا','Fadi Abu-Shahla','مدير مركز التميّز الاستشاري والبحثي','Director, Consulting & Research CoE','fabushahla@cbg.sa'],['حمدي الطويل','Hamdy Al-Taweel','مدير مركز التميّز في التحول الرقمي','Director, Digital Transformation CoE','h.altaweel@nps.edu.sa'],['حسام الحمدان','Hussam Al-Hamdan','مدير مركز الخدمات المشتركة','Director, Shared Services Center','h.hamdan@cbg.sa']]]];
-const tbd=()=>`<div class="tbd">${L('يُضاف لاحقًا','To be added')}</div>`;
-const P={
-home:()=>hero(L('شريك موثوق في تطوير منظومتَي التعليم والقطاع غير الربحي','A trusted partner in developing education and nonprofit ecosystems'),L('نُقدِّم خدمات استشارية وتنفيذية احترافية، من تحديد الاحتياجات إلى تطبيق الحلول وبناء القدرات.','Professional advisory and implementation services, from identifying needs to delivering solutions and building capabilities.'))
-.replace('</p></div>',`</p><a class="btn" href="#services">${L('استعرض خدماتنا','Explore our services')}</a><a class="btn o" href="#contact">${L('تواصل معنا','Contact us')}</a></div>`)+
-`<main>${sec(L('المجموعة بالأرقام','CBG in Numbers'),'',statsH())}${sec(L('ثلاثة مستويات للتغيير','Three levels of change'),L('تتناول خدماتنا المنظومات القطاعية والمؤسسات والمبادرات.','Our services address sector ecosystems, institutions, and initiatives.'),lvH())}${sec(L('لماذا نحن','Why Us'),'',cards(why.slice(0,3).map(w=>[w[0],w[1],w[2],w[3]].slice(0,4)).map(w=>[w[0],w[1],w[2],w[3]]).map(w=>[L(w[0],w[1]),'',L(w[2],w[3]),'']),'p'))}</main>`,
-about:()=>hero(L('من نحن','About Us'),L('نحن منشأة اجتماعية سعودية مملوكة لوقف الباقيات، ونُخصِّص أرباحنا لمصارفه الخيرية المعتمدة.','We are a Saudi social enterprise owned by Al-Baqiyat Endowment, and we allocate our profits to its approved charitable purposes.'),1)+
-`<main>${sec(L('المجموعة في سطور','CBG at a Glance'),L('نعمل في أنحاء المملكة على مستوى المنظومات القطاعية والمؤسسات والمبادرات، لمساعدة عملائنا على تحديد الاحتياجات، وتطوير الاستراتيجيات ووضع الخطط، وتصميم الحلول وتطبيقها.','We work across Saudi Arabia at the level of sector ecosystems, institutions, and initiatives, helping clients identify needs, develop strategies and plans, and design and implement solutions.'),statsH())}
-${sec(L('تعرّف علينا','Get to Know Us'),'',cards([['من نخدم','Who We Serve','الجهات الحكومية والأهلية المعنية بالتعليم والقطاع غير الربحي: وزارة التعليم ووحداتها، الوزارات، المراكز الوطنية، الهيئات العامة، الجامعات الحكومية، ومجالس القطاع غير الربحي والمؤسسات والجمعيات الأهلية.','Government and nonprofit stakeholders: the Ministry of Education and its units, other ministries, national centers, public authorities, public universities, and nonprofit councils, foundations, and associations.'],['كيف نعمل','How We Work','نبدأ بفهم احتياجات العميل والسياق الأوسع، ثم نتفق على النطاق والمسؤوليات والنتائج، ونقدّم الدعم الاستشاري أو نشغّل منتجاتنا ومنصاتنا أو نتولّى الإدارة والتنفيذ.','We begin by understanding needs and context, agree on scope, responsibilities, and results, then provide advisory support, operate our products and platforms, or take responsibility for management and implementation.'],['أين نعمل','Where We Work','مقرنا الرئيس في الرياض، ومكتب جدة للخدمات المشتركة وتصميم الحلول الرقمية، ومركز التميّز الاستشاري والبحثي في عمّان بالأردن.','Headquarters in Riyadh; Jeddah office for shared services and digital solution design; Consulting and Research Center of Excellence in Amman, Jordan.']].map(x=>[L(x[0],x[1]),'',L(x[2],x[3]),''])))}
-${sec(L('توجهنا الاستراتيجي','Our Strategic Direction'),'',cards([['رؤيتنا','Our Vision','أن نكون شريكًا موثوقًا يسهم في تطوير منظومتَي التعليم والقطاع غير الربحي وتعزيز فاعليتهما وأثرهما.','To be a trusted partner contributing to the development of education and nonprofit ecosystems and strengthening their effectiveness and impact.'],['رسالتنا','Our Mission','تحويل أولويات الأطراف في المنظومتين إلى حلول عملية تُطبَّق على نطاق واسع، وبناء القدرات اللازمة لاستدامة أثرها.','To turn stakeholders’ priorities into practical solutions implemented at scale, and build the capabilities that sustain their impact.']].map(x=>[L(x[0],x[1]),'',L(x[2],x[3]),'']),'p'))}
-<div style="height:18px"></div><div class="grid">${vals.map(v=>`<div class="card"><h3>${L(v[0],v[1])}</h3></div>`).join('')}</div></section>
-<section class="band"><h2>${L('كلمة الرئيس التنفيذي','CEO Message')}</h2><div class="ceo"><p>${L('نؤمن بأن قيمة الاستشارة تُقاس بالقرارات التي تُعين عليها، والحلول التي تُطبَّق فعلًا، والقدرات التي تبقى لدى العميل بعد انتهاء المشروع. ولأننا مملوكون لوقف الباقيات، تذهب أرباحنا إلى مصارفه الخيرية المعتمدة، وهذه الغاية تزيدنا حرصًا على كفاءة الموارد وجودة المخرجات والأثر الذي يتركه كل مشروع.','We believe the value of advisory work is measured by the decisions it informs, the solutions it puts into practice, and the capabilities that remain with the client after a project ends. Because we are owned by Al-Baqiyat Endowment, our profits go to its approved charitable purposes, which makes us all the more careful about efficient resources, quality deliverables, and lasting impact.')}</p><p><b>${L('إبراهيم الشهري — الرئيس التنفيذي','Ibrahim Al-Shehri — CEO')}</b></p></div></section></main>`,
-services:()=>hero(L('أعمالنا وخدماتنا','Our Work & Services'),L('خمسة مجالات تغطي مسار العمل من التشخيص والتصميم إلى التنفيذ والتشغيل.','Five practice areas covering the full path from diagnosis and design to delivery and operations.'),1)+
-`<main>${sec(L('مجالات عملنا','Our Practice Areas'),'',lvH())}${sec(L('خدماتنا','Our Services'),'',`<div class="grid">${svc.map((s,i)=>`<div class="card ${i%2?'p':''}"><h3>${L(s[0],s[1])}</h3><ul class="chk">${s[2].map(t=>{const p=t.split('|');return `<li>${L(p[0],p[1])}</li>`}).join('')}</ul></div>`).join('')}</div>`)}${sec(L('منتجاتنا ومنصاتنا','Our Products & Platforms'),'',tbd())}${sec(L('فعالياتنا','Our Events'),'',tbd())}</main>`,
-team:()=>hero(L('فريقنا','Our Team'),L('لكل فريق دور محدد يربط الخبرات اللازمة لتخطيط أعمالنا وتنفيذها ودعمها.','Each team has a defined role, connecting the expertise needed to plan, deliver, and support our work.'),1)+
-`<main>${team.map(g=>sec(L(g[0],g[1]),'',`<div class="grid">${g[2].map(p=>`<div class="card"><div class="person"><div class="av">${L(p[0],p[1]).charAt(0)}</div><div><b>${L(p[0],p[1])}</b><small>${L(p[2],p[3])}</small><small><a href="mailto:${p[4]}" dir="ltr">${p[4]}</a></small></div></div></div>`).join('')}</div>`)).join('')}</main>`,
-clients:()=>hero(L('عملاؤنا وشركاؤنا','Our Clients & Partners'),'',1)+`<main>${sec(L('عملاؤنا','Our Clients'),'',tbd())}${sec(L('شركاؤنا','Our Partners'),'',tbd())}</main>`,
-careers:()=>hero(L('الوظائف الشاغرة','Our Vacancies'),L('للتقديم، أرسلوا سيرتكم الذاتية بالعربية أو الإنجليزية إلى hr@cbg.sa مع ذكر المسمى الوظيفي والرقم المرجعي في عنوان الرسالة.','To apply, send your CV in English or Arabic to hr@cbg.sa, including the job title and reference number in the subject line.'),1)+
-`<main><section><div class="grid">${[['مكتب الرياض','Riyadh Office','المقر الرئيسي','Headquarters'],['مكتب جدة','Jeddah Office','الخدمات المشتركة وتصميم الحلول الرقمية','Shared Services and Digital Solution Design'],['مكتب عمّان','Amman Office','مركز التميّز الاستشاري والبحثي','Consulting and Research Center of Excellence']].map(o=>`<div class="card p"><h3>${L(o[0],o[1])}</h3><p>${L(o[2],o[3])}</p><p style="margin-top:12px;color:var(--ink)">${L('لا توجد وظائف شاغرة في هذا المكتب حاليًا.','There are currently no open positions at this office.')}</p></div>`).join('')}</div></section></main>`,
-contact:()=>hero(L('تواصل معنا','Contact Us'),L('يسعدنا الاستماع إلى احتياجات مؤسستكم أو التعرف على مبادرة تخططون لها، وبحث سبل دعمكم.','We would be happy to hear about your institution’s needs or an initiative you are planning, and explore how we can support you.'),1)+
-`<main>${sec(L('مكاتبنا','Our Offices'),'',`<div class="grid"><div class="card"><h3>${L('مكتب الرياض | المقر الرئيسي','Riyadh Office | Headquarters')}</h3><p>${L('العنوان يُضاف لاحقًا','Address to be added')}</p></div><div class="card"><h3>${L('مكتب جدة','Jeddah Office')}</h3><p>${L('العنوان يُضاف لاحقًا','Address to be added')}</p></div><div class="card"><h3>${L('مكتب عمّان','Amman Office')}</h3><p>${L('مجمع النعيمات التجاري 2، الطابق الثاني، مكتب 202 — 1 شارع العظماء، حي الجندويل، منطقة وادي السير، عمّان 11814، الأردن','Al-Nu’aimat Commercial Complex 2, Floor 2, Office 202 — 1 Al-Uthama’ Street, Al-Jandawil, Wadi Al-Seer, Amman 11814, Jordan')}</p><p><a href="https://goo.gl/maps/orEDLjivv95Bg17EA" target="_blank" rel="noopener">${L('الموقع على الخريطة','View on map')}</a></p></div></div>`)}
-${sec(L('ابقَ على تواصل','Stay Connected'),L('تابعونا على منصات التواصل للاطلاع على الرؤى المعرفية ومستجدات أعمالنا. (الروابط تُضاف لاحقًا)','Follow us for insights and updates from our work. (Links to be added)'),`<a class="btn" href="mailto:info@cbg.sa">info@cbg.sa</a>`)}</main>`
-};
-function render(){
-const h=(location.hash||'#home').slice(1),k=P[h]?h:'home';
-document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';
-document.title=L('مجموعة بناء الطاقات | CBG','Capacity Building Group | CBG');
-document.getElementById('nav').innerHTML=N.map(n=>`<a href="#${n[0]}" class="${n[0]===k?'on':''}">${L(n[1],n[2])}</a>`).join('');
-document.getElementById('nav').classList.remove('open');
-document.getElementById('lang').textContent=L('English','عربي');
-document.getElementById('app').innerHTML=P[k]();
-document.getElementById('foot').innerHTML=`<div><div class="logo" style="color:#fff">CBG<i>»</i></div><div style="margin-top:8px">${L('منشأة اجتماعية سعودية مملوكة لوقف الباقيات','A Saudi social enterprise owned by Al-Baqiyat Endowment')}<br>SINCE 2006</div></div><div>${N.slice(1,5).map(n=>`<a href="#${n[0]}">${L(n[1],n[2])}</a>`).join('')}</div><div><a href="mailto:info@cbg.sa">info@cbg.sa</a><a href="mailto:hr@cbg.sa">hr@cbg.sa</a></div>`;
-window.scrollTo(0,0);
-}
-document.getElementById('lang').onclick=()=>{lang=lang==='ar'?'en':'ar';try{localStorage.setItem('cbg-lang',lang)}catch(e){}render()};
-document.getElementById('menu').onclick=()=>document.getElementById('nav').classList.toggle('open');
-window.addEventListener('hashchange',render);render();
-</script>
+
+<script src="code.js" defer></script>
 </body>
 </html>
